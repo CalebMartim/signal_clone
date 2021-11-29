@@ -1,0 +1,35 @@
+section {
+  height: 100vh;
+}
+
+.intro {
+  display: grid;
+  background: var(--lightBlue);
+  grid-template-rows: 33% 1fr;
+}
+
+.intro_content {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 4em 1.25em 0 1.25em;
+  justify-content: space-around;
+}
+
+.intro_content p {
+  max-width: 45ch;
+  letter-spacing: 0.1ch;
+  font-weight: 300;
+}
+
+.intro_images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro_images img {
+  position: absolute;
+  transform: rotate(25deg);
+  max-width: 50%;
+}
