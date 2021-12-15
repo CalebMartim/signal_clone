@@ -6,6 +6,7 @@ section {
   display: grid;
   background: var(--lightBlue);
   grid-template-rows: 33% 1fr;
+  overflow: hidden;
 }
 
 .intro_content {
@@ -22,14 +23,35 @@ section {
   font-weight: 300;
 }
 
+.getSignalBtn {
+  width: 8.25rem;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background: white;
+  font-size: 1em;
+  font-weight: 700;
+}
+
 .intro_images {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  margin-inline: 1em;
 }
 
 .intro_images img {
   position: absolute;
-  transform: rotate(25deg);
-  max-width: 50%;
+  transform: rotate(22.5deg);
+  width: 100%;
+  max-width: 218px;
+}
+
+.intro_images img:nth-of-type(1) {
+  margin-right: 14em;
+}
+
+.intro_images img:nth-of-type(2) {
+  margin-left: 5em;
 }
