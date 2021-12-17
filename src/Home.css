@@ -12,25 +12,29 @@ section {
 .intro_content {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  margin: 4em 1.25em 0 1.25em;
+  /* max-width: 500px; */
+  margin: 4em 1.25em 5em 1.25em;
   justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .intro_content p {
-  max-width: 45ch;
   letter-spacing: 0.1ch;
-  font-weight: 300;
+  font-weight: 400;
+  width: 35ch;
+  max-width: 45ch;
+  line-height: 1.375rem;
 }
 
 .getSignalBtn {
-  width: 8.25rem;
-  padding: 1em;
+  padding-inline: 1em;
+  height: 3.125rem;
   border: none;
   border-radius: 0.5em;
   background: white;
-  font-size: 1em;
+  font-size: 1.25rem;
   font-weight: 700;
+  color: #2c6bed;
 }
 
 .intro_images {
@@ -43,15 +47,81 @@ section {
 
 .intro_images img {
   position: absolute;
-  transform: rotate(22.5deg);
+  transform: rotate(22.5deg) scale(0.9);
   width: 100%;
   max-width: 218px;
 }
 
 .intro_images img:nth-of-type(1) {
-  margin-right: 14em;
+  margin-right: 5em;
 }
 
 .intro_images img:nth-of-type(2) {
   margin-left: 5em;
+}
+
+/* Responsiveness for the main section */
+
+@media (min-width: 426px) {
+  .intro_images {
+    justify-content: flex-end;
+  }
+  .intro_images img {
+    transform: rotate(22.5deg) scale(1);
+  }
+  .intro_images img:nth-of-type(1) {
+    margin-right: 8em;
+  }
+  .intro_images img:nth-of-type(2) {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 876px) {
+  .intro {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .intro_content {
+    justify-content: center;
+    margin-left: 4rem;
+  }
+  .intro_images {
+    justify-content: center;
+  }
+  .intro_images img {
+    transform: rotate(22.5deg) scale(1.4);
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    z-index: -2;
+  }
+  .intro_content {
+    justify-content: center;
+    align-items: center;
+  }
+  .intro_content h1 {
+    font-size: 3.75em;
+  }
+  .intro_content p {
+    font-size: 1.425em;
+    letter-spacing: 0.3pt;
+    line-height: 1.215em;
+  }
+  .intro_images {
+    justify-content: flex-start;
+    margin-left: 5em;
+    background-attachment: fixed;
+  }
+  .intro_images img {
+    transform: rotate(22.5deg) scale(1.8);
+  }
+}
+
+.testimonials {
+  background: #ececec;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
 }
